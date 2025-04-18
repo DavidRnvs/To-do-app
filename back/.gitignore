@@ -1,0 +1,36 @@
+# Environnement virtuel
+env/
+venv/
+ENV/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Base de données SQLite
+*.sqlite3
+
+# Fichiers de migration
+**/migrations/
+!*/migrations/__init__.py
+
+# Fichiers de configuration et cache
+*.log
+*.pot
+*.pyc
+*.mo
+*.swp
+.DS_Store
+*.tmp
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Fichiers secrets
+.env
+
+# static/media (si générés automatiquement)
+staticfiles/
+media/
