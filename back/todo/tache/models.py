@@ -1,6 +1,11 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 import datetime
+from django.utils import timezone
+
+
+TACHE_DATE_MAX = timezone.make_aware(datetime.datetime(2025, 4, 19))
+TACHE_DATE_MIN = timezone.make_aware(datetime.datetime(2020, 1, 1))
 
 class User(models.Model):
     Username = models.fields.TextField()
@@ -13,14 +18,14 @@ class Tache(models.Model):
         
     date_de_creation = models.DateTimeField(
         validators=[
-            MaxValueValidator(limit_value=datetime.datetime(2025, 4, 19)),
-            MinValueValidator(limit_value=datetime.datetime(2025, 1, 1))
+            MaxValueValidator(limit_value=TACHE_DATE_MAX),
+            MinValueValidator(limit_value=TACHE_DATE_MIN)
         ]
     )
     date_de_fin = models.DateTimeField(
         validators=[
-            MaxValueValidator(limit_value=datetime.datetime(2025, 4, 19)),
-            MinValueValidator(limit_value=datetime.datetime(2025, 1, 1))
+            MaxValueValidator(limit_value=TACHE_DATE_MAX),
+            MinValueValidator(limit_value=TACHE_DATE_MIN)
         ]
     )
     nom_tache = models.fields.CharField(max_length=50)
