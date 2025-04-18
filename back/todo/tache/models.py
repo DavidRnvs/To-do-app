@@ -10,7 +10,7 @@ TACHE_DATE_MIN = timezone.make_aware(datetime.datetime(2020, 1, 1))
 class User(models.Model):
     username = models.fields.TextField(null=False, default='')
     email = models.EmailField(null=False, default='')
-    mot_de_passe = models.fields.TextField(null=False, default='')
+    password = models.fields.TextField(null=False, default='')
 
 
 class Tache(models.Model):
