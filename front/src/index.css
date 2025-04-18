@@ -877,3 +877,34 @@
   .cancel-btn:hover {
     background-color: #d32f2f;
   }
+  .edit-btn {
+    background-color: rgba(74, 131, 180, 0.2); /* Bleu très transparent */
+    color: #4A83B4; /* Bleu doux */
+    border: 1px solid rgba(74, 131, 180, 0.3);
+    padding: 4px 8px;
+    border-radius: 12px; /* Bordures plus arrondies */
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-btn:hover {
+    background-color: rgba(74, 131, 180, 0.3);
+    border-color: rgba(74, 131, 180, 0.5);
+  }
+  
+  .delete-btn {
+    background-color: rgba(205, 92, 92, 0.2); /* Rouge très transparent */
+    color: #CD5C5C; /* Rouge doux */
+    border: 1px solid rgba(205, 92, 92, 0.3);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: rgba(205, 92, 92, 0.3);
+    border-color: rgba(205, 92, 92, 0.5);
+  }

@@ -111,16 +111,17 @@ function Home () {
         ? tasks.filter(task => !task.completed)
         : tasks.filter(task => task.completed);
     
-      const getCategoryColor = (category) => {
-        const colors = {
-          meeting: '#FF9F40',
-          work: '#4CAF50',
-          branding: '#2196F3',
-          report: '#9C27B0',
-          plan: '#FF5252'
-        };
-        return colors[category] || '#4CAF50';
-      };
+        const getCategoryColor = (category) => {
+            const colors = {
+              meeting: '#C5DFFF',   // Bleu doux (Team Meeting)
+              branding: '#D3C5FF',  // Violet clair (Work on Branding)
+              report: '#FFECC5',    // Jaune pastel (Make a Report for client)
+              plan: '#FFC5EB',      // Rose clair (Create a planer)
+              work: '#C5FFD9'       // Vert pastel (Create Treatment Plan)
+            };
+            return colors[category] || '#C5FFD9'; // Vert pastel comme couleur par défaut
+          };
+          
     
       return (
         <div className="app">
