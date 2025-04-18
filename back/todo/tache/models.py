@@ -8,7 +8,10 @@ TACHE_DATE_MAX = timezone.make_aware(datetime.datetime(2025, 4, 19))
 TACHE_DATE_MIN = timezone.make_aware(datetime.datetime(2020, 1, 1))
 
 class User(models.Model):
-    Username = models.fields.TextField()
+    username = models.fields.TextField(null=False, default='')
+    email = models.EmailField(null=False, default='')
+    mot_de_passe = models.fields.TextField(null=False, default='')
+
 
 class Tache(models.Model):
     class Etat(models.TextChoices):
