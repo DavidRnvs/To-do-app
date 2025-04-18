@@ -1,4 +1,17 @@
-function Register () {
+import { useState } from "react";
+
+function Register() {
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const toggleConfirmPasswordVisibility = () => {
+        setShowConfirmPassword(!showConfirmPassword);
+    };
+
     return (
         <div className="register-container">
             <div className="form-section">
@@ -19,14 +32,38 @@ function Register () {
                         <input type="email" placeholder="anjara.david@gmail.com" />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group password-group">
                         <label>Mot de passe</label>
-                        <input type="password" placeholder="••••••••" />
+                        <div className="password-input-container">
+                            <input 
+                                type={showPassword ? "text" : "password"} 
+                                placeholder="••••••••" 
+                            />
+                            <button 
+                                type="button" 
+                                className="toggle-password"
+                                onClick={togglePasswordVisibility}
+                            >
+                                {showPassword ? "Masquer" : "Afficher"}
+                            </button>
+                        </div>
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group password-group">
                         <label>Confirmer le mot de passe</label>
-                        <input type="password" placeholder="••••••••" />
+                        <div className="password-input-container">
+                            <input 
+                                type={showConfirmPassword ? "text" : "password"} 
+                                placeholder="••••••••" 
+                            />
+                            <button 
+                                type="button" 
+                                className="toggle-password"
+                                onClick={toggleConfirmPasswordVisibility}
+                            >
+                                {showConfirmPassword ? "Masquer" : "Afficher"}
+                            </button>
+                        </div>
                     </div>
 
                     <button type="submit" className="create-account-btn">Créer un compte</button>
