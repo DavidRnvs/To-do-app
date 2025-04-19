@@ -2,7 +2,7 @@
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
+  Routes
 } from "react-router";
 import Register from "../src/pages/Register"
 import Login from "../src/pages/Login"

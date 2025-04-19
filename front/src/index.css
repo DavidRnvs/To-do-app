@@ -1217,3 +1217,19 @@
     background-color: rgba(205, 92, 92, 0.3);
     border-color: rgba(205, 92, 92, 0.5);
   }
+  
+  .error-message {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: #52c41a;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  input.error {
+    border-color: #ff4d4f;
+  }

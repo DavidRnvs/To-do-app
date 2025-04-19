@@ -12,7 +12,6 @@ class User(models.Model):
     email = models.EmailField(null=False, default='')
     password = models.fields.TextField(null=False, default='')
 
-
 class Tache(models.Model):
     class Etat(models.TextChoices):
         Planifiée = "Planifiée!"
@@ -33,4 +32,5 @@ class Tache(models.Model):
     )
     nom_tache = models.fields.CharField(max_length=50)
     etat = models.fields.CharField(choices=Etat.choices, max_length=30)
+    description = models.fields.CharField(max_length=250, default='')
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
