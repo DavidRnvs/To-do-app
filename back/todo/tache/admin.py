@@ -1,5 +1,6 @@
 from django.contrib import admin
 from tache.models import User,Tache
+#kkk
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ['username']
